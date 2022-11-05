@@ -19,7 +19,7 @@ root.render(
       {/* nest route */}
       <Route path="/" element={<App />} >
         {/* add expenses component */}
-        <Route path="expenses" element={<Expenses />} />
+        <Route path="expenses" element={<Expenses />} >
         <Route
             index
             element={
@@ -29,6 +29,7 @@ root.render(
             }
           />
           <Route path=":expenseId" element={<Expense />} />
+          </Route>
         {/* add invoices component */}
         <Route path="invoices" element={<Invoices />} >
           <Route
